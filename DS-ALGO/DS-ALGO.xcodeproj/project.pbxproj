@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		1B309DD12200333600535245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DD02200333600535245 /* AppDelegate.swift */; };
-		1B309DD32200333600535245 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DD22200333600535245 /* ViewController.swift */; };
+		1B309DD32200333600535245 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DD22200333600535245 /* TestingViewController.swift */; };
 		1B309DD62200333600535245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B309DD42200333600535245 /* Main.storyboard */; };
 		1B309DD82200333800535245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B309DD72200333800535245 /* Assets.xcassets */; };
 		1B309DDB2200333800535245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B309DD92200333800535245 /* LaunchScreen.storyboard */; };
 		1B309DE62200333800535245 /* DS_ALGOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DE52200333800535245 /* DS_ALGOTests.swift */; };
 		1B309DF12200333800535245 /* DS_ALGOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DF02200333800535245 /* DS_ALGOUITests.swift */; };
+		1B309E00220037CD00535245 /* BasicSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DFF220037CD00535245 /* BasicSorting.swift */; };
+		1B309E022200584A00535245 /* Merge:QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309E012200584A00535245 /* Merge:QuickSort.swift */; };
+		1BBCE4042202BFF700CAC96E /* Stacks:Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBCE4032202BFF700CAC96E /* Stacks:Queues.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,7 @@
 /* Begin PBXFileReference section */
 		1B309DCD2200333600535245 /* DS-ALGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DS-ALGO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B309DD02200333600535245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1B309DD22200333600535245 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1B309DD22200333600535245 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		1B309DD52200333600535245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1B309DD72200333800535245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B309DDA2200333800535245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,9 @@
 		1B309DEC2200333800535245 /* DS-ALGOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DS-ALGOUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B309DF02200333800535245 /* DS_ALGOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS_ALGOUITests.swift; sourceTree = "<group>"; };
 		1B309DF22200333800535245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1B309DFF220037CD00535245 /* BasicSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSorting.swift; sourceTree = "<group>"; };
+		1B309E012200584A00535245 /* Merge:QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Merge:QuickSort.swift"; sourceTree = "<group>"; };
+		1BBCE4032202BFF700CAC96E /* Stacks:Queues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stacks:Queues.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +103,9 @@
 		1B309DCF2200333600535245 /* DS-ALGO */ = {
 			isa = PBXGroup;
 			children = (
+				1B309DFE220037A400535245 /* Sorting */,
 				1B309DD02200333600535245 /* AppDelegate.swift */,
-				1B309DD22200333600535245 /* ViewController.swift */,
+				1B309DD22200333600535245 /* TestingViewController.swift */,
 				1B309DD42200333600535245 /* Main.storyboard */,
 				1B309DD72200333800535245 /* Assets.xcassets */,
 				1B309DD92200333800535245 /* LaunchScreen.storyboard */,
@@ -123,6 +130,16 @@
 				1B309DF22200333800535245 /* Info.plist */,
 			);
 			path = "DS-ALGOUITests";
+			sourceTree = "<group>";
+		};
+		1B309DFE220037A400535245 /* Sorting */ = {
+			isa = PBXGroup;
+			children = (
+				1B309DFF220037CD00535245 /* BasicSorting.swift */,
+				1B309E012200584A00535245 /* Merge:QuickSort.swift */,
+				1BBCE4032202BFF700CAC96E /* Stacks:Queues.swift */,
+			);
+			path = Sorting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,8 +273,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1B309DD32200333600535245 /* ViewController.swift in Sources */,
+				1B309E00220037CD00535245 /* BasicSorting.swift in Sources */,
+				1BBCE4042202BFF700CAC96E /* Stacks:Queues.swift in Sources */,
+				1B309DD32200333600535245 /* TestingViewController.swift in Sources */,
 				1B309DD12200333600535245 /* AppDelegate.swift in Sources */,
+				1B309E022200584A00535245 /* Merge:QuickSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
