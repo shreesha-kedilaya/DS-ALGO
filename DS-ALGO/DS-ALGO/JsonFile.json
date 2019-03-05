@@ -1,0 +1,315 @@
+[
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/1141531",
+"fields": {
+"mediaType": {
+"stringValue": "Video"
+},
+"timestamp": {
+"integerValue": "1549368788687"
+},
+"mediaId": {
+"stringValue": "314620"
+},
+"contentSourceUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/912d7b514b4c46a494715c072bdf0862_1280X720.jpg"
+}
+},
+"createTime": "2019-02-12T01:31:41.046631Z",
+"updateTime": "2019-02-12T01:31:41.046631Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/123432",
+"fields": {
+"mediaType": {
+"stringValue": "Video"
+},
+"timestamp": {
+"integerValue": "1549368788687"
+},
+"mediaId": {
+"stringValue": "314620"
+},
+"contentSourceUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/912d7b514b4c46a494715c072bdf0862_1280X720.jpg"
+}
+},
+"createTime": "2019-02-12T05:01:39.611208Z",
+"updateTime": "2019-02-12T05:01:39.611208Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/2141531",
+"fields": {
+"mediaId": {
+"stringValue": "314620"
+},
+"contentSourceUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/912d7b514b4c46a494715c072bdf0862_1280X720.jpg"
+},
+"mediaType": {
+"stringValue": "Video"
+},
+"timestamp": {
+"integerValue": "1549368788687"
+}
+},
+"createTime": "2019-02-12T01:16:49.442099Z",
+"updateTime": "2019-02-12T01:16:49.442099Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/314620",
+"fields": {
+"mediaDuration": {
+"stringValue": "1277000"
+},
+"contentSourceUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/912d7b514b4c46a494715c072bdf0862_1280X720.jpg"
+},
+"mediaType": {
+"stringValue": "Video"
+},
+"imageUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/912d7b514b4c46a494715c072bdf0862_1280X720.jpg"
+},
+"timestamp": {
+"integerValue": "1549368788687"
+},
+"mediaId": {
+"stringValue": "314620"
+}
+},
+"createTime": "2019-02-11T12:42:02.528762Z",
+"updateTime": "2019-02-11T12:42:02.528762Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/316676",
+"fields": {
+"mediaId": {
+"stringValue": "316676"
+},
+"mediaDuration": {
+"stringValue": "1277000"
+},
+"contentSourceUrl": {
+"stringValue": ""
+},
+"mediaType": {
+"stringValue": "Video"
+},
+"imageUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/912d7b514b4c46a494715c072bdf0862_1280X720.jpg"
+},
+"timestamp": {
+"integerValue": "1549368788687"
+}
+},
+"createTime": "2019-02-05T10:54:58.297248Z",
+"updateTime": "2019-02-05T12:13:09.365311Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/323432",
+"fields": {
+"mediaId": {
+"stringValue": "314620"
+},
+"contentSourceUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/912d7b514b4c46a494715c072bdf0862_1280X720.jpg"
+},
+"mediaType": {
+"stringValue": "Video"
+},
+"timestamp": {
+"integerValue": "1549368788687"
+}
+},
+"createTime": "2019-02-12T04:59:44.501217Z",
+"updateTime": "2019-02-12T04:59:44.501217Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/314660",
+"fields": {
+"imageUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kstage/viacomIN/0466fbfb0dbb492aa81c6af1811fb3a0_1280X720.jpg"
+},
+"timestamp": {
+"integerValue": "1549368807689"
+},
+"mediaId": {
+"stringValue": "314660"
+},
+"mediaDuration": {
+"stringValue": "37120"
+},
+"contentSourceUrl": {
+"stringValue": ""
+},
+"mediaType": {
+"stringValue": "Video"
+}
+},
+"createTime": "2019-02-05T12:13:28.046829Z",
+"updateTime": "2019-02-05T12:13:28.046829Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/316722",
+"fields": {
+"imageUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_500,h_500/kstage/viacomIN/ed679ca495c14c269b688cde6362cdde_600X600.jpg"
+},
+"timestamp": {
+"integerValue": "1549428856526"
+},
+"mediaId": {
+"stringValue": "316722"
+},
+"mediaDuration": {
+"stringValue": "540000"
+},
+"contentSourceUrl": {
+"stringValue": ""
+},
+"mediaType": {
+"stringValue": "Audio"
+}
+},
+"createTime": "2019-02-05T10:43:44.338133Z",
+"updateTime": "2019-02-06T04:54:17.913240Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/316339",
+"fields": {
+"mediaType": {
+"stringValue": "Audio"
+},
+"imageUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_500,h_500/kstage/viacomIN/400a7821580f43399290459494ee7a93_600X600.jpg"
+},
+"timestamp": {
+"integerValue": "1549428912430"
+},
+"mediaId": {
+"stringValue": "316339"
+},
+"mediaDuration": {
+"stringValue": "1318000"
+},
+"contentSourceUrl": {
+"stringValue": ""
+}
+},
+"createTime": "2019-02-06T04:55:13.034649Z",
+"updateTime": "2019-02-06T04:55:13.034649Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/1346583",
+"fields": {
+"mediaDuration": {
+"stringValue": "0"
+},
+"contentSourceUrl": {
+"stringValue": ""
+},
+"mediaType": {
+"stringValue": ""
+},
+"imageUrl": {
+"stringValue": ""
+},
+"timestamp": {
+"integerValue": "1549948845750"
+},
+"mediaId": {
+"stringValue": ""
+}
+},
+"createTime": "2019-02-12T05:20:47.559586Z",
+"updateTime": "2019-02-12T05:20:47.559586Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/1226583",
+"fields": {
+"mediaId": {
+"stringValue": "710595"
+},
+"mediaDuration": {
+"stringValue": "364000"
+},
+"contentSourceUrl": {
+"stringValue": ""
+},
+"mediaType": {
+"stringValue": ""
+},
+"imageUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kimg/kimg/41c0797c0943430fba0e2c935ae69a8f_1280X720.jpg"
+},
+"timestamp": {
+"integerValue": "1549949647828"
+}
+},
+"createTime": "2019-02-12T05:34:09.144885Z",
+"updateTime": "2019-02-12T05:34:09.144885Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+},
+{
+"document": {
+"name": "projects/vootkids-auth/databases/(default)/documents/users/S64DTtC2XBgZihMPHBZ0vRyRGGT2/profiles/kpDhk4IuM0G8KSZDLAVFS64DTtC2XBgZih/Media/23423543",
+"fields": {
+"imageUrl": {
+"stringValue": "https://viacom18-res.cloudinary.com/f_auto,q_auto:eco,w_540,h_303/kimg/kimg/41c0797c0943430fba0e2c935ae69a8f_1280X720.jpg"
+},
+"timestamp": {
+"integerValue": "1549950518101"
+},
+"mediaId": {
+"stringValue": "710595"
+},
+"mediaDuration": {
+"stringValue": "364000"
+},
+"contentSourceUrl": {
+"stringValue": ""
+},
+"mediaType": {
+"stringValue": ""
+}
+},
+"createTime": "2019-02-12T05:48:38.886563Z",
+"updateTime": "2019-02-12T05:48:38.886563Z"
+},
+"readTime": "2019-02-13T05:04:05.371813Z"
+}
+]
+
