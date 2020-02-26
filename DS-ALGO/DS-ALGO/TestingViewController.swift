@@ -50,19 +50,65 @@ class TestingViewController: UIViewController {
 //        print("\n\n\n")
 //        print(AdvancedSorting.mergeSort(array: array, <))
         
+        print("Heaps \(Heap.init(array: [1,2,5,6,7,19,20,47], sort: <))")
+    
+        let bst = BinarySearchTree<Int>.init(array: [50,70,80,60,30,20,10,40])
+        
+        print(bst.description)
         print("Queues" )
         
+//        print(bst.remove())
+        print("IsBST")
+        bst.traverseInOrder { (value) in
+            print("Values \(value)")
+        }
+        print(bst.isBst(leftNode: nil, rightNode: nil))
         let queue = Queue<String>()
         
-        for i in 0...100 {
-            queue.enqueue("i is \(i)")
-        }
+        let tree = BinarySearchTree<Int>.init(value: 50)
+        let tree1 = BinarySearchTree<Int>.init(value: 90)
+        let tree2 = BinarySearchTree<Int>.init(value: 80)
+        let tree3 = BinarySearchTree<Int>.init(value: 70)
         
-        for _ in 0...40 {
-            let string = queue.dequeue()
-            
-            print(string)
-        }
+        let tree4 = BinarySearchTree<Int>.init(value: 60)
+        let tree5 = BinarySearchTree<Int>.init(value: 100)
+        let tree6 = BinarySearchTree<Int>.init(value: 40)
+        let tree7 = BinarySearchTree<Int>.init(value: 30)
+        let tree8 = BinarySearchTree<Int>.init(value: 20)
+        
+        
+        tree.left = tree7
+        tree7.parent = tree
+        tree.right = tree3
+        tree3.parent = tree
+        
+        tree7.left = tree8
+        tree8.parent = tree7
+        tree7.right = tree6
+        tree6.parent = tree7
+        
+        tree3.left = tree4
+        tree4.parent = tree3
+        tree3.right = tree1
+        tree1.parent = tree3
+        
+        tree1.left = tree2
+        tree2.parent = tree1
+        tree1.right = tree5
+        tree5.parent = tree1
+        
+        
+        print(tree.description)
+        print("isbist \(tree.isBstAmature())")
+//        for i in 0...100 {
+//            queue.enqueue("i is \(i)")
+//        }
+//        
+//        for _ in 0...40 {
+//            let string = queue.dequeue()
+//            
+//            print(string)
+//        }
     }
 }
 

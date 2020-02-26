@@ -7,37 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B234F7323F67D05008C319E /* Heaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B234F7223F67D05008C319E /* Heaps.swift */; };
 		1B309DD12200333600535245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DD02200333600535245 /* AppDelegate.swift */; };
 		1B309DD32200333600535245 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DD22200333600535245 /* TestingViewController.swift */; };
 		1B309DD62200333600535245 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B309DD42200333600535245 /* Main.storyboard */; };
 		1B309DD82200333800535245 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B309DD72200333800535245 /* Assets.xcassets */; };
 		1B309DDB2200333800535245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B309DD92200333800535245 /* LaunchScreen.storyboard */; };
-		1B309DE62200333800535245 /* DS_ALGOTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DE52200333800535245 /* DS_ALGOTests.swift */; };
-		1B309DF12200333800535245 /* DS_ALGOUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DF02200333800535245 /* DS_ALGOUITests.swift */; };
 		1B309E00220037CD00535245 /* BasicSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DFF220037CD00535245 /* BasicSorting.swift */; };
-		1B309E022200584A00535245 /* Merge:QuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309E012200584A00535245 /* Merge:QuickSort.swift */; };
+		1B309E022200584A00535245 /* MergeQuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309E012200584A00535245 /* MergeQuickSort.swift */; };
+		1BA717E7240599440097BF3A /* BST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA717E6240599440097BF3A /* BST.swift */; };
+		1BA717E9240599590097BF3A /* AVL tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA717E8240599590097BF3A /* AVL tree.swift */; };
 		1BAED9B42213ED9000402F26 /* JsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BAED9B32213ED9000402F26 /* JsonFile.json */; };
-		1BBCE4042202BFF700CAC96E /* Stacks:Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBCE4032202BFF700CAC96E /* Stacks:Queues.swift */; };
+		1BBCE4042202BFF700CAC96E /* StacksQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBCE4032202BFF700CAC96E /* StacksQueues.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1B309DE22200333800535245 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B309DC52200333600535245 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B309DCC2200333600535245;
-			remoteInfo = "DS-ALGO";
-		};
-		1B309DED2200333800535245 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1B309DC52200333600535245 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1B309DCC2200333600535245;
-			remoteInfo = "DS-ALGO";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		1B234F7223F67D05008C319E /* Heaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heaps.swift; sourceTree = "<group>"; };
 		1B309DCD2200333600535245 /* DS-ALGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DS-ALGO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B309DD02200333600535245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1B309DD22200333600535245 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
@@ -45,34 +30,20 @@
 		1B309DD72200333800535245 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B309DDA2200333800535245 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B309DDC2200333800535245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B309DE12200333800535245 /* DS-ALGOTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DS-ALGOTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B309DE52200333800535245 /* DS_ALGOTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS_ALGOTests.swift; sourceTree = "<group>"; };
 		1B309DE72200333800535245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1B309DEC2200333800535245 /* DS-ALGOUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "DS-ALGOUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B309DF02200333800535245 /* DS_ALGOUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DS_ALGOUITests.swift; sourceTree = "<group>"; };
 		1B309DF22200333800535245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B309DFF220037CD00535245 /* BasicSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSorting.swift; sourceTree = "<group>"; };
-		1B309E012200584A00535245 /* Merge:QuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Merge:QuickSort.swift"; sourceTree = "<group>"; };
+		1B309E012200584A00535245 /* MergeQuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeQuickSort.swift; sourceTree = "<group>"; };
+		1BA717E6240599440097BF3A /* BST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BST.swift; sourceTree = "<group>"; };
+		1BA717E8240599590097BF3A /* AVL tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVL tree.swift"; sourceTree = "<group>"; };
 		1BAED9B32213ED9000402F26 /* JsonFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonFile.json; sourceTree = "<group>"; };
-		1BBCE4032202BFF700CAC96E /* Stacks:Queues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Stacks:Queues.swift"; sourceTree = "<group>"; };
+		1BBCE4032202BFF700CAC96E /* StacksQueues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksQueues.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1B309DCA2200333600535245 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B309DDE2200333800535245 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B309DE92200333800535245 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -96,8 +67,6 @@
 			isa = PBXGroup;
 			children = (
 				1B309DCD2200333600535245 /* DS-ALGO.app */,
-				1B309DE12200333800535245 /* DS-ALGOTests.xctest */,
-				1B309DEC2200333800535245 /* DS-ALGOUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -105,6 +74,7 @@
 		1B309DCF2200333600535245 /* DS-ALGO */ = {
 			isa = PBXGroup;
 			children = (
+				1BA717E52405992A0097BF3A /* Trees */,
 				1B309DFE220037A400535245 /* Sorting */,
 				1B309DD02200333600535245 /* AppDelegate.swift */,
 				1B309DD22200333600535245 /* TestingViewController.swift */,
@@ -139,10 +109,20 @@
 			isa = PBXGroup;
 			children = (
 				1B309DFF220037CD00535245 /* BasicSorting.swift */,
-				1B309E012200584A00535245 /* Merge:QuickSort.swift */,
-				1BBCE4032202BFF700CAC96E /* Stacks:Queues.swift */,
+				1B309E012200584A00535245 /* MergeQuickSort.swift */,
+				1BBCE4032202BFF700CAC96E /* StacksQueues.swift */,
 			);
 			path = Sorting;
+			sourceTree = "<group>";
+		};
+		1BA717E52405992A0097BF3A /* Trees */ = {
+			isa = PBXGroup;
+			children = (
+				1B234F7223F67D05008C319E /* Heaps.swift */,
+				1BA717E8240599590097BF3A /* AVL tree.swift */,
+				1BA717E6240599440097BF3A /* BST.swift */,
+			);
+			path = Trees;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,42 +145,6 @@
 			productReference = 1B309DCD2200333600535245 /* DS-ALGO.app */;
 			productType = "com.apple.product-type.application";
 		};
-		1B309DE02200333800535245 /* DS-ALGOTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B309DF82200333800535245 /* Build configuration list for PBXNativeTarget "DS-ALGOTests" */;
-			buildPhases = (
-				1B309DDD2200333800535245 /* Sources */,
-				1B309DDE2200333800535245 /* Frameworks */,
-				1B309DDF2200333800535245 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1B309DE32200333800535245 /* PBXTargetDependency */,
-			);
-			name = "DS-ALGOTests";
-			productName = "DS-ALGOTests";
-			productReference = 1B309DE12200333800535245 /* DS-ALGOTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		1B309DEB2200333800535245 /* DS-ALGOUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1B309DFB2200333800535245 /* Build configuration list for PBXNativeTarget "DS-ALGOUITests" */;
-			buildPhases = (
-				1B309DE82200333800535245 /* Sources */,
-				1B309DE92200333800535245 /* Frameworks */,
-				1B309DEA2200333800535245 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1B309DEE2200333800535245 /* PBXTargetDependency */,
-			);
-			name = "DS-ALGOUITests";
-			productName = "DS-ALGOUITests";
-			productReference = 1B309DEC2200333800535245 /* DS-ALGOUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -213,14 +157,7 @@
 				TargetAttributes = {
 					1B309DCC2200333600535245 = {
 						CreatedOnToolsVersion = 10.0;
-					};
-					1B309DE02200333800535245 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 1B309DCC2200333600535245;
-					};
-					1B309DEB2200333800535245 = {
-						CreatedOnToolsVersion = 10.0;
-						TestTargetID = 1B309DCC2200333600535245;
+						LastSwiftMigration = 1120;
 					};
 				};
 			};
@@ -238,8 +175,6 @@
 			projectRoot = "";
 			targets = (
 				1B309DCC2200333600535245 /* DS-ALGO */,
-				1B309DE02200333800535245 /* DS-ALGOTests */,
-				1B309DEB2200333800535245 /* DS-ALGOUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -256,20 +191,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1B309DDF2200333800535245 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B309DEA2200333800535245 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -278,43 +199,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B309E00220037CD00535245 /* BasicSorting.swift in Sources */,
-				1BBCE4042202BFF700CAC96E /* Stacks:Queues.swift in Sources */,
+				1BBCE4042202BFF700CAC96E /* StacksQueues.swift in Sources */,
 				1B309DD32200333600535245 /* TestingViewController.swift in Sources */,
+				1B234F7323F67D05008C319E /* Heaps.swift in Sources */,
+				1BA717E9240599590097BF3A /* AVL tree.swift in Sources */,
 				1B309DD12200333600535245 /* AppDelegate.swift in Sources */,
-				1B309E022200584A00535245 /* Merge:QuickSort.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B309DDD2200333800535245 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B309DE62200333800535245 /* DS_ALGOTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1B309DE82200333800535245 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1B309DF12200333800535245 /* DS_ALGOUITests.swift in Sources */,
+				1BA717E7240599440097BF3A /* BST.swift in Sources */,
+				1B309E022200584A00535245 /* MergeQuickSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1B309DE32200333800535245 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1B309DCC2200333600535245 /* DS-ALGO */;
-			targetProxy = 1B309DE22200333800535245 /* PBXContainerItemProxy */;
-		};
-		1B309DEE2200333800535245 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1B309DCC2200333600535245 /* DS-ALGO */;
-			targetProxy = 1B309DED2200333800535245 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		1B309DD42200333600535245 /* Main.storyboard */ = {
@@ -466,7 +361,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Viacom.DS-ALGO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -485,90 +380,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Viacom.DS-ALGO";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		1B309DF92200333800535245 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ANM49J4VY;
-				INFOPLIST_FILE = "DS-ALGOTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Viacom.DS-ALGOTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DS-ALGO.app/DS-ALGO";
-			};
-			name = Debug;
-		};
-		1B309DFA2200333800535245 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ANM49J4VY;
-				INFOPLIST_FILE = "DS-ALGOTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Viacom.DS-ALGOTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DS-ALGO.app/DS-ALGO";
-			};
-			name = Release;
-		};
-		1B309DFC2200333800535245 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ANM49J4VY;
-				INFOPLIST_FILE = "DS-ALGOUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Viacom.DS-ALGOUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DS-ALGO";
-			};
-			name = Debug;
-		};
-		1B309DFD2200333800535245 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 9ANM49J4VY;
-				INFOPLIST_FILE = "DS-ALGOUITests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Viacom.DS-ALGOUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DS-ALGO";
 			};
 			name = Release;
 		};
@@ -589,24 +402,6 @@
 			buildConfigurations = (
 				1B309DF62200333800535245 /* Debug */,
 				1B309DF72200333800535245 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B309DF82200333800535245 /* Build configuration list for PBXNativeTarget "DS-ALGOTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B309DF92200333800535245 /* Debug */,
-				1B309DFA2200333800535245 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1B309DFB2200333800535245 /* Build configuration list for PBXNativeTarget "DS-ALGOUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1B309DFC2200333800535245 /* Debug */,
-				1B309DFD2200333800535245 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
