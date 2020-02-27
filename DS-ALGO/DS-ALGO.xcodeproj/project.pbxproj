@@ -15,10 +15,13 @@
 		1B309DDB2200333800535245 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B309DD92200333800535245 /* LaunchScreen.storyboard */; };
 		1B309E00220037CD00535245 /* BasicSorting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DFF220037CD00535245 /* BasicSorting.swift */; };
 		1B309E022200584A00535245 /* MergeQuickSort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309E012200584A00535245 /* MergeQuickSort.swift */; };
+		1B74D7A52407E6C000A67E8A /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B74D7A42407E6C000A67E8A /* LinkedList.swift */; };
 		1BA717E7240599440097BF3A /* BST.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA717E6240599440097BF3A /* BST.swift */; };
 		1BA717E9240599590097BF3A /* AVL tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA717E8240599590097BF3A /* AVL tree.swift */; };
 		1BAED9B42213ED9000402F26 /* JsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = 1BAED9B32213ED9000402F26 /* JsonFile.json */; };
 		1BBCE4042202BFF700CAC96E /* StacksQueues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBCE4032202BFF700CAC96E /* StacksQueues.swift */; };
+		1BBEEA622406996500E1C700 /* Trie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBEEA612406996500E1C700 /* Trie.swift */; };
+		1BBEEA642406A54100E1C700 /* RB-Tree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BBEEA632406A54100E1C700 /* RB-Tree.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,10 +39,13 @@
 		1B309DF22200333800535245 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B309DFF220037CD00535245 /* BasicSorting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicSorting.swift; sourceTree = "<group>"; };
 		1B309E012200584A00535245 /* MergeQuickSort.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergeQuickSort.swift; sourceTree = "<group>"; };
+		1B74D7A42407E6C000A67E8A /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		1BA717E6240599440097BF3A /* BST.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BST.swift; sourceTree = "<group>"; };
 		1BA717E8240599590097BF3A /* AVL tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVL tree.swift"; sourceTree = "<group>"; };
 		1BAED9B32213ED9000402F26 /* JsonFile.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = JsonFile.json; sourceTree = "<group>"; };
 		1BBCE4032202BFF700CAC96E /* StacksQueues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksQueues.swift; sourceTree = "<group>"; };
+		1BBEEA612406996500E1C700 /* Trie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trie.swift; sourceTree = "<group>"; };
+		1BBEEA632406A54100E1C700 /* RB-Tree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RB-Tree.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,7 @@
 		1B309DCF2200333600535245 /* DS-ALGO */ = {
 			isa = PBXGroup;
 			children = (
+				1B74D7A32407E6B200A67E8A /* Linked List */,
 				1BA717E52405992A0097BF3A /* Trees */,
 				1B309DFE220037A400535245 /* Sorting */,
 				1B309DD02200333600535245 /* AppDelegate.swift */,
@@ -115,12 +122,22 @@
 			path = Sorting;
 			sourceTree = "<group>";
 		};
+		1B74D7A32407E6B200A67E8A /* Linked List */ = {
+			isa = PBXGroup;
+			children = (
+				1B74D7A42407E6C000A67E8A /* LinkedList.swift */,
+			);
+			path = "Linked List";
+			sourceTree = "<group>";
+		};
 		1BA717E52405992A0097BF3A /* Trees */ = {
 			isa = PBXGroup;
 			children = (
 				1B234F7223F67D05008C319E /* Heaps.swift */,
 				1BA717E8240599590097BF3A /* AVL tree.swift */,
 				1BA717E6240599440097BF3A /* BST.swift */,
+				1BBEEA612406996500E1C700 /* Trie.swift */,
+				1BBEEA632406A54100E1C700 /* RB-Tree.swift */,
 			);
 			path = Trees;
 			sourceTree = "<group>";
@@ -201,10 +218,13 @@
 				1B309E00220037CD00535245 /* BasicSorting.swift in Sources */,
 				1BBCE4042202BFF700CAC96E /* StacksQueues.swift in Sources */,
 				1B309DD32200333600535245 /* TestingViewController.swift in Sources */,
+				1BBEEA622406996500E1C700 /* Trie.swift in Sources */,
 				1B234F7323F67D05008C319E /* Heaps.swift in Sources */,
 				1BA717E9240599590097BF3A /* AVL tree.swift in Sources */,
 				1B309DD12200333600535245 /* AppDelegate.swift in Sources */,
+				1BBEEA642406A54100E1C700 /* RB-Tree.swift in Sources */,
 				1BA717E7240599440097BF3A /* BST.swift in Sources */,
+				1B74D7A52407E6C000A67E8A /* LinkedList.swift in Sources */,
 				1B309E022200584A00535245 /* MergeQuickSort.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

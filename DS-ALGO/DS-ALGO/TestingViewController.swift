@@ -50,20 +50,74 @@ class TestingViewController: UIViewController {
 //        print("\n\n\n")
 //        print(AdvancedSorting.mergeSort(array: array, <))
         
-        print("Heaps \(Heap.init(array: [1,2,5,6,7,19,20,47], sort: <))")
+        bst()
+        avlTree()
+        trie()
+        linkedList()
+//        for i in 0...100 {
+//            queue.enqueue("i is \(i)")
+//        }
+//        
+//        for _ in 0...40 {
+//            let string = queue.dequeue()
+//            
+//            print(string)
+//        }
+    }
     
+    func trie() {
+        let trie = Trie(word: "Shreesha")
+        trie.insert(word: "monstor")
+        trie.insert(word: "monsing")
+        trie.insert(word: "monsung")
+        trie.insert(word: "montor")
+        trie.insert(word: "monitor")
+        trie.insert(word: "is")
+        trie.insert(word: "a")
+//        trie.wordsInSubtrie(rootNode: trie.root.children.first!.value, partialWord: "shr")
+        
+//        trie.contains(word: "mon")
+        trie.getWords(node: trie.findLastNodeOf(word: "mon")!, appendWord: "")
+        trie.findWordsWithPrefix(prefix: "mon")
+    }
+    
+    func linkedList() {
+        let linkedList = SingleLinkedList(array: [1,2,5,6,7,19,20,47])
+        linkedList.remove(value: 6)
+        
+        print(linkedList)
+    }
+    
+    func heap() {
+        print("Heaps \(Heap.init(array: [1,2,5,6,7,19,20,47], sort: <))")
+    }
+    
+    func avlTree() {
+        let avlTree = AVLTree<Int>()
+        avlTree.insert(array: [50,70,80,60,30,20,10,40])
+        
+        avlTree.doInOrder(node: avlTree.root) { (node) in
+            print("Node is \(node.value)")
+        }
+        do {
+            try avlTree.inOrderCheckBalanced(avlTree.root)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func bst() {
         let bst = BinarySearchTree<Int>.init(array: [50,70,80,60,30,20,10,40])
         
         print(bst.description)
         print("Queues" )
         
-//        print(bst.remove())
+        //        print(bst.remove())
         print("IsBST")
         bst.traverseInOrder { (value) in
             print("Values \(value)")
         }
         print(bst.isBst(leftNode: nil, rightNode: nil))
-        let queue = Queue<String>()
         
         let tree = BinarySearchTree<Int>.init(value: 50)
         let tree1 = BinarySearchTree<Int>.init(value: 90)
@@ -100,15 +154,6 @@ class TestingViewController: UIViewController {
         
         print(tree.description)
         print("isbist \(tree.isBstAmature())")
-//        for i in 0...100 {
-//            queue.enqueue("i is \(i)")
-//        }
-//        
-//        for _ in 0...40 {
-//            let string = queue.dequeue()
-//            
-//            print(string)
-//        }
     }
 }
 

@@ -79,6 +79,32 @@ public class TreeNode<T: Comparable> {
         
         return self
     }
+    
+    var description: String {
+        var s = ""
+        if let left = left {
+            s += "(\(left.description)) <- "
+        }
+        s += "{\(value), \(height)}"
+        if let right = right {
+            s += " -> (\(right.description))"
+        }
+        return s
+    }
+    
+    var debugDescription: String {
+        var s = "key: \(value) height: \(height)"
+        if let parent = parent {
+            s += ", parent: \(parent.value)"
+        }
+        if let left = left {
+            s += ", left = [" + left.debugDescription + "]"
+        }
+        if let right = right {
+            s += ", right = [" + right.debugDescription + "]"
+        }
+        return s
+    }
 }
 
 class AVLTree<T: Comparable> {
@@ -88,6 +114,12 @@ class AVLTree<T: Comparable> {
     private(set) var size = 0
     
     init() { }
+    
+    func insert(array: [T]) {
+        for value in array {
+            insert(value: value)
+        }
+    }
     
     func insert(value: T) {
         if let root = root {
@@ -268,13 +300,99 @@ class AVLTree<T: Comparable> {
             // Handle stem cases
             if let replacement = node.left?.max(), replacement !== node {
                 node.value = replacement.value
-//                node.payload = replacement.payload
                 delete(node: replacement)
             } else if let replacement = node.right?.min(), replacement !== node {
                 node.value = replacement.value
-//                node.payload = replacement.payload
                 delete(node: replacement)
             }
         }
     }
+    
+    var description: String {
+        return root?.description ?? "[]"
+    }
+    
+    var debugDescription: String {
+        return root?.debugDescription ?? "[]"
+    }
+}
+
+extension AVLTree {
+    func doInOrder(node: Node?, _ completion: (Node) -> Void) {
+        if let node = node {
+            doInOrder(node: node.left) { lnode in
+                completion(lnode)
+            }
+            completion(node)
+            doInOrder(node: node.right) { rnode in
+                completion(rnode)
+            }
+        }
+    }
+    
+    func doInPreOrder(node: Node?, _ completion: (Node) -> Void) {
+        if let node = node {
+            completion(node)
+            doInPreOrder(node: node.left) { lnode in
+                completion(lnode)
+            }
+            doInPreOrder(node: node.right) { rnode in
+                completion(rnode)
+            }
+        }
+    }
+    
+    func doInPostOrder(node: Node?, _ completion: (Node) -> Void) {
+        if let node = node {
+            doInPostOrder(node: node.left) { lnode in
+                completion(lnode)
+            }
+            doInPostOrder(node: node.right) { rnode in
+                completion(rnode)
+            }
+            completion(node)
+        }
+    }
+    
+    func height(_ node: Node?) -> Int {
+        if let node = node {
+            let lHeight = height(node.left)
+            let rHeight = height(node.right)
+            
+            return max(lHeight, rHeight) + 1
+        }
+        return 0
+    }
+    
+    func inOrderCheckBalanced(_ node: Node?) throws {
+        if let node = node {
+            guard abs(height(node.left) - height(node.right)) <= 1 else {
+                throw AVLTreeError.notBalanced
+            }
+            try inOrderCheckBalanced(node.left)
+            try inOrderCheckBalanced(node.right)
+        }
+    }
+    
+    func display(node: Node?, level: Int) {
+        if let node = node {
+            display(node: node.right, level: level + 1)
+            print("")
+            if node.isRoot {
+                print("Root -> ", terminator: "")
+            }
+            for _ in 0..<level {
+                print("        ", terminator:  "")
+            }
+            print("(\(node.value):\(node.height))", terminator: "")
+            if node.isRoot {
+                print("        ", terminator:  "")
+            }
+            display(node: node.left, level: level + 1)
+        }
+    }
+}
+
+enum AVLTreeError: Error {
+    case notBalanced
 }

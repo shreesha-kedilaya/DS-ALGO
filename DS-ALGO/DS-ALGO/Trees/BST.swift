@@ -183,7 +183,7 @@ class BinarySearchTree<T: Comparable> {
         if isLeaf {
             return 0
         } else {
-            return 1 + max(left?.height() ?? 0, right?.height() ?? 0)
+            return 1 + Swift.max(left?.height() ?? 0, right?.height() ?? 0)
         }
     }
     
