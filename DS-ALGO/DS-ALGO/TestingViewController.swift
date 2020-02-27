@@ -54,15 +54,19 @@ class TestingViewController: UIViewController {
         avlTree()
         trie()
         linkedList()
-//        for i in 0...100 {
-//            queue.enqueue("i is \(i)")
-//        }
-//        
-//        for _ in 0...40 {
-//            let string = queue.dequeue()
-//            
-//            print(string)
-//        }
+        
+        findMaxElementsFromSubArray(array: [9,6,11,8,10,5,14,13,93,14,9,6,11,8,10,5,14,13,93,14], size: 6)
+        findNthFromEnd(n: 2, node: SingleLinkedList<Int>(array: [1,2,3,4,5,6,7]))
+        let queue = Queue<String>()
+        for i in 0...100 {
+            queue.enqueue("i is \(i)")
+        }
+        
+        for _ in 0...40 {
+            let string = queue.dequeue()
+            
+            print(string)
+        }
     }
     
     func trie() {

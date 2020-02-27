@@ -44,7 +44,7 @@ extension SimpleStack: Sequence {
 
 // MARK: Simple Queue.
 class SimpleQueue<T> {
-    private var array = [T]()
+    var array = [T]()
     
     public var isEmpty: Bool {
         return array.isEmpty
@@ -54,11 +54,23 @@ class SimpleQueue<T> {
         return array.count
     }
     
+    public var last: T? {
+        return array.last
+    }
+    
+    public func dequeueBack() -> T? {
+        if isEmpty {
+            return nil
+        } else {
+            return array.removeLast()
+        }
+    }
+    
     public func enqueue(_ element: T) {
         array.append(element)
     }
     
-    public func dequeue(_ element: T) -> T? {
+    public func dequeue() -> T? {
         if isEmpty {
             return nil
         } else {
@@ -71,7 +83,7 @@ class SimpleQueue<T> {
     }
 }
 
-class Queue<T> {
+public class Queue<T> {
     private var array = [T?]()
     private var head = 0
     
@@ -85,6 +97,10 @@ class Queue<T> {
     
     public func enqueue(_ element: T) {
         array.append(element)
+    }
+    
+    public var last: T? {
+        return array.last as? T
     }
     
     public func dequeue() -> T? {
