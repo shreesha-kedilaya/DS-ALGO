@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B00A9B4240F8C7000F30E66 /* ArrayProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B00A9B3240F8C7000F30E66 /* ArrayProblems.swift */; };
+		1B01ABA0240D0A1000298000 /* SubViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B01AB9F240D0A1000298000 /* SubViews.swift */; };
+		1B14CA1324090ECA00607741 /* StacksQueuesProblems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B14CA1224090ECA00607741 /* StacksQueuesProblems.swift */; };
 		1B234F7323F67D05008C319E /* Heaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B234F7223F67D05008C319E /* Heaps.swift */; };
 		1B309DD12200333600535245 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DD02200333600535245 /* AppDelegate.swift */; };
 		1B309DD32200333600535245 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B309DD22200333600535245 /* TestingViewController.swift */; };
@@ -26,6 +29,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B00A9B3240F8C7000F30E66 /* ArrayProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayProblems.swift; sourceTree = "<group>"; };
+		1B01AB9F240D0A1000298000 /* SubViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubViews.swift; sourceTree = "<group>"; };
+		1B14CA1224090ECA00607741 /* StacksQueuesProblems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StacksQueuesProblems.swift; sourceTree = "<group>"; };
 		1B234F7223F67D05008C319E /* Heaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Heaps.swift; sourceTree = "<group>"; };
 		1B309DCD2200333600535245 /* DS-ALGO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DS-ALGO.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B309DD02200333600535245 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +67,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B00A9B2240F8C6300F30E66 /* Array */ = {
+			isa = PBXGroup;
+			children = (
+				1B00A9B3240F8C7000F30E66 /* ArrayProblems.swift */,
+			);
+			path = Array;
+			sourceTree = "<group>";
+		};
 		1B309DC42200333600535245 = {
 			isa = PBXGroup;
 			children = (
@@ -82,11 +96,13 @@
 		1B309DCF2200333600535245 /* DS-ALGO */ = {
 			isa = PBXGroup;
 			children = (
+				1B00A9B2240F8C6300F30E66 /* Array */,
 				1B74D7A8240837E800A67E8A /* Stacks Queues */,
 				1B74D7A32407E6B200A67E8A /* Linked List */,
 				1BA717E52405992A0097BF3A /* Trees */,
 				1B309DFE220037A400535245 /* Sorting */,
 				1B309DD02200333600535245 /* AppDelegate.swift */,
+				1B01AB9F240D0A1000298000 /* SubViews.swift */,
 				1B309DD22200333600535245 /* TestingViewController.swift */,
 				1BAED9B32213ED9000402F26 /* JsonFile.json */,
 				1B309DD42200333600535245 /* Main.storyboard */,
@@ -137,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				1BBCE4032202BFF700CAC96E /* StacksQueues.swift */,
+				1B14CA1224090ECA00607741 /* StacksQueuesProblems.swift */,
 			);
 			path = "Stacks Queues";
 			sourceTree = "<group>";
@@ -235,9 +252,12 @@
 				1B309DD12200333600535245 /* AppDelegate.swift in Sources */,
 				1BBEEA642406A54100E1C700 /* RB-Tree.swift in Sources */,
 				1BA717E7240599440097BF3A /* BST.swift in Sources */,
+				1B00A9B4240F8C7000F30E66 /* ArrayProblems.swift in Sources */,
+				1B14CA1324090ECA00607741 /* StacksQueuesProblems.swift in Sources */,
 				1B74D7A52407E6C000A67E8A /* LinkedList.swift in Sources */,
 				1B74D7A724082E7C00A67E8A /* LinkedListProblems.swift in Sources */,
 				1B309E022200584A00535245 /* MergeQuickSort.swift in Sources */,
+				1B01ABA0240D0A1000298000 /* SubViews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

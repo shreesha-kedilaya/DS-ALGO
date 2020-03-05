@@ -12,8 +12,10 @@ typealias jsonDictionary = [String: Any]
 typealias jsonArray = [jsonDictionary]
 
 class TestingViewController: UIViewController {
-
-//    var array = [2,3,5,6,1,2,12,14,7,9,55,22]
+    @IBOutlet weak var topView: SubViews!
+    
+    @IBOutlet weak var bottomView: SubViews!
+    //    var array = [2,3,5,6,1,2,12,14,7,9,55,22]
     var array = [14,1,12,3,7,10,55]
     
     override func viewDidLoad() {
@@ -43,30 +45,37 @@ class TestingViewController: UIViewController {
 //        print(BasicSorting.insertionSort(array: array, <))
 //        print("Buuble Sort")
 //        print(BasicSorting.bubbleSort(array: array, <))
-//        print("Merge Sort")
-//        print(AdvancedSorting.mergeSort(array: array, <))
+        print("Merge Sort")
+        print(AdvancedSorting.mergeSort(array: array, <))
+        
+        findNthMostFrequentNumber(array: [1,2,2,2,2,3,3,4,4,4,5,6,6,6], n: 2)
 //        print("Hoares quick sorting")
 //        print(AdvancedSorting.quickSortHoare(array: array, <))
 //        print("\n\n\n")
 //        print(AdvancedSorting.mergeSort(array: array, <))
         
-        bst()
-        avlTree()
-        trie()
-        linkedList()
+//        bottomView.hitTest(bottomView.center, with: UIEvent)
         
-        findMaxElementsFromSubArray(array: [9,6,11,8,10,5,14,13,93,14,9,6,11,8,10,5,14,13,93,14], size: 6)
-        findNthFromEnd(n: 2, node: SingleLinkedList<Int>(array: [1,2,3,4,5,6,7]))
-        let queue = Queue<String>()
-        for i in 0...100 {
-            queue.enqueue("i is \(i)")
-        }
-        
-        for _ in 0...40 {
-            let string = queue.dequeue()
-            
-            print(string)
-        }
+//        bst()
+//        avlTree()
+//        trie()
+//        linkedList()
+//
+//        printMatrixDiagonally(matrix: [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]])
+//        print(IslandProblem().findNumberOfClusters(matrix: [[1,0,1,0,1],[1,1,0,0,0],[0,1,0,1,1]]))
+//
+//        findMaxElementsFromSubArray(array: [9,6,11,8,10,5,14,13,93,14,9,6,11,8,10,5,14,13,93,14], size: 6)
+//        findNthFromEnd(n: 2, node: SingleLinkedList<Int>(array: [1,2,3,4,5,6,7]))
+//        let queue = Queue<String>()
+//        for i in 0...100 {
+//            queue.enqueue("i is \(i)")
+//        }
+//
+//        for _ in 0...40 {
+//            let string = queue.dequeue()
+//
+//            print(string)
+//        }
     }
     
     func trie() {
@@ -177,4 +186,24 @@ func stringify(json: Any, prettyPrinted: Bool = false) -> String {
     }
     
     return ""
+}
+
+extension TestingViewController : URLSessionTaskDelegate, URLSessionDownloadDelegate {
+    
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
+        if totalBytesExpectedToWrite > 0 {
+            let progress = Float(totalBytesWritten) / Float(totalBytesExpectedToWrite)
+            debugPrint("Progress \(downloadTask) \(progress)")
+        }
+    }
+
+    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
+        debugPrint("Download finished: \(location)")
+        try? FileManager.default.removeItem(at: location)
+    }
+
+    func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
+        debugPrint("Task completed: \(task), error: \(error)")
+    }
+
 }

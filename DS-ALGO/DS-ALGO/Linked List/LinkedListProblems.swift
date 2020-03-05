@@ -22,7 +22,7 @@ import Foundation
 
 func findMaxElementsFromSubArray<T: Comparable>(array: [T], size: Int) -> [T] {
     var combined = [T]()
-    let queue = SimpleQueue<Int>()
+    let queue = SimpleQueue<Int>() // This is a Dequeue
     for i in 0..<size {
         
         while !queue.isEmpty && array[i] > array[queue.last!] {

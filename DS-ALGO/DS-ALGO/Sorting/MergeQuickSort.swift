@@ -13,12 +13,16 @@ class AdvancedSorting {
     // MARK: Merge Sort
     class func mergeSort<T>(array: [T], _ isOrderedBefore: (T, T) -> Bool) -> [T] {
         
-        guard array.count > 1 else { return array }
+        guard array.count > 1 else {
+            return array
+        }
         
         let middleIndex = array.count / 2
         
         let leftArray = mergeSort(array: Array(array[0..<middleIndex]), isOrderedBefore)
         let rightArray = mergeSort(array: Array(array[middleIndex..<array.count]), isOrderedBefore)
+        
+        print("Left array \(leftArray) right array \(rightArray)")
         
         return merge(leftArray, rightArray, isOrderedBefore)
     }

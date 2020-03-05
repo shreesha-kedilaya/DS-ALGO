@@ -10,9 +10,21 @@ import Foundation
 
 //If you didn't gloss over the math section, you'd have seen that for any heap the elements at array indices n/2 to n-1 are the leaves of the tree. We can simply skip those leaves. We only have to process the other nodes, since they are parents with one or more children and therefore may be in the wrong order.
 // https://github.com/raywenderlich/swift-algorithm-club/tree/master/Heap
+
+struct HeapNode<T: Comparable> {
+    var value: T
+    var payLoad: Any?
+    
+    init(value: T, payload: Any? = nil) {
+        self.value = value
+        self.payLoad = payload
+    }
+
+}
+
 struct Heap<T: Comparable> {
     
-    var nodes = [T]()
+    var nodes = [HeapNode<T>]()
     private var orderCriteria: (T, T) -> Bool
     // Returns the parent of the child.
     // May be empty also
@@ -32,13 +44,26 @@ struct Heap<T: Comparable> {
         return 2*i + 2
     }
     
+    init(tupleList: [(T, Any)], sort: @escaping (T, T) -> Bool) {
+        self.orderCriteria = sort
+        tupleList.forEach { (value, payLoad) in
+            nodes.append(HeapNode<T>.init(value: value, payload: payLoad))
+        }
+        
+        for i in stride(from: (nodes.count/2-1), through: 0, by: -1) {
+            shiftDown(i)
+        }
+    }
+    
     init(array: [T], sort: @escaping (T, T) -> Bool) {
         self.orderCriteria = sort
         configureHeap(from: array)
     }
     
     private mutating func configureHeap(from array: [T]) {
-        nodes = array
+        array.forEach { (value) in
+            nodes.append(HeapNode<T>.init(value: value))
+        }
         for i in stride(from: (nodes.count/2-1), through: 0, by: -1) {
             shiftDown(i)
         }
@@ -49,7 +74,12 @@ struct Heap<T: Comparable> {
     }
     
     mutating func insert(_ value: T) {
-        nodes.append(value)
+        nodes.append(HeapNode<T>.init(value: value))
+        shiftUp(nodes.count - 1)
+    }
+    
+    mutating func insert(_ value: T, payload: Any) {
+        nodes.append(HeapNode<T>.init(value: value, payload: payload))
         shiftUp(nodes.count - 1)
     }
     
@@ -59,7 +89,7 @@ struct Heap<T: Comparable> {
         let child = nodes[childIndex]
         var parentIndex = self.parentIndex(ofIndex: childIndex)
         
-        while childIndex > 0 && orderCriteria(child, nodes[parentIndex]) {
+        while childIndex > 0 && orderCriteria(child.value, nodes[parentIndex].value) {
             nodes[childIndex] = nodes[parentIndex]
             childIndex = parentIndex
             parentIndex = self.parentIndex(ofIndex: childIndex)
@@ -68,7 +98,7 @@ struct Heap<T: Comparable> {
         nodes[childIndex] = child
     }
     
-    public func peek() -> T? {
+    public func peek() -> HeapNode<T>? {
         return nodes.first
     }
     
@@ -80,7 +110,7 @@ struct Heap<T: Comparable> {
     }
     
     
-    @discardableResult mutating func remove() -> T? {
+    @discardableResult mutating func remove() -> HeapNode<T>? {
         guard !nodes.isEmpty else { return nil }
         
         if nodes.count == 1 {
@@ -95,7 +125,7 @@ struct Heap<T: Comparable> {
         }
     }
     
-    @discardableResult mutating func remove(at index: Int) -> T? {
+    @discardableResult mutating func remove(at index: Int) -> HeapNode<T>? {
         guard index < nodes.count else {return  nil}
         
         let size = nodes.count - 1
@@ -119,10 +149,10 @@ struct Heap<T: Comparable> {
         // first, we're done. If not, that element is out-of-place and we make
         // it "float down" the tree until the heap property is restored.
         var first = index
-        if leftChildIndex < endIndex && orderCriteria(nodes[leftChildIndex], nodes[first]) {
+        if leftChildIndex < endIndex && orderCriteria(nodes[leftChildIndex].value, nodes[first].value) {
             first = leftChildIndex
         }
-        if rightChildIndex < endIndex && orderCriteria(nodes[rightChildIndex], nodes[first]) {
+        if rightChildIndex < endIndex && orderCriteria(nodes[rightChildIndex].value, nodes[first].value) {
             first = rightChildIndex
         }
         if first == index { return }
@@ -135,3 +165,24 @@ struct Heap<T: Comparable> {
         shiftDown(from: index, until: nodes.count)
     }
 }
+
+extension Heap {
+    
+    mutating func sortUntil(index: Int, elements: (HeapNode<T>) -> Void) -> [HeapNode<T>] {
+        for i in stride(from: (nodes.count - 1), through: nodes.count - index, by: -1) {
+            nodes.swapAt(0, i)
+            shiftDown(from: 0, until: i)
+            elements(nodes[i])
+        }
+        return nodes
+    }
+    
+    mutating func sort() -> [HeapNode<T>] {
+        for i in stride(from: (nodes.count - 1), through: 1, by: -1) {
+            nodes.swapAt(0, i)
+            shiftDown(from: 0, until: i)
+        }
+        return nodes
+    }
+}
+
