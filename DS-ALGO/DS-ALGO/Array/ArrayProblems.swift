@@ -69,7 +69,8 @@ class IslandProblem {
     var visited = [[Bool]]()
     func findNumberOfClusters(matrix: [[Int]]) -> Int {
         var count = 0
-        visited = [[Bool]].init(repeating: [false, false, false], count: matrix.count)
+        let array = [Bool].init(repeating: false, count: matrix[0].count)
+        visited = [[Bool]].init(repeating: array, count: matrix.count)
         for rowArray in matrix.enumerated() {
             for item in rowArray.element.enumerated() {
                 if item.element == 1 && visited[rowArray.offset][item.offset] == false {
@@ -102,7 +103,7 @@ class IslandProblem {
         for i in -1...1 {
             for j in -1...1 {
                 if doesNeighbourExistsAs1(matrix: matrix, row: row + i, column: column + j) {
-                    doDfs(matrix: matrix, row: row + 1, column: column + 1)
+                    doDfs(matrix: matrix, row: row + i, column: column + j)
                 }
             }
         }
@@ -159,4 +160,228 @@ Next greater element for 20     = 27
 Next greater element for 27     = null
 Next greater element for 54     = null
 Next greater element for 98     = null
+ */
+
+
+
+//https://www.ideserve.co.in/learn/last-index-of-element-in-sorted-array-with-duplicates
+
+/*
+ Given a sorted array of integers containing duplicates, write a program which returns the last index of an element.
+
+ Example:
+ Input:
+ array = {0, 1, 2, 2, 4, 5, 5, 5, 8};
+ num = 5;
+ Output:
+ Element 5 found at index 7
+ */
+
+func searchElementAndReturnMaxIndex(array: [Int], number: Int) -> Int? {
+    guard !array.isEmpty else { return nil }
+    
+    var start = 0
+    var end = array.count - 1
+    
+    while start <= end {
+        let mid = (start + end) / 2
+        
+        if array[mid] == number && (mid == end || (array[mid + 1] > number)) {
+            return mid
+        } else if number < array[mid] {
+            end = mid - 1
+        } else if number >= array[mid] {
+            start = mid + 1
+        }
+    }
+    
+    return nil
+}
+
+//https://www.ideserve.co.in/learn/first-index-of-element-in-sorted-array-with-duplicates
+
+func searchElementAndReturnMinIndex(array: [Int], number: Int) -> Int? {
+    guard !array.isEmpty else { return nil }
+    
+    var start = 0
+    var end = array.count - 1
+    
+    while start <= end {
+        let mid = (start + end) / 2
+        
+        if array[mid] == number && (mid == 0 || (array[mid - 1] < number)) {
+            return mid
+        } else if number <= array[mid] {
+            end = mid - 1
+        } else if number > array[mid] {
+            start = mid + 1
+        }
+    }
+    
+    return nil
+}
+
+//https://www.ideserve.co.in/learn/maximum-value-of-index-element-product-sum-with-only-rotations
+
+/*
+ Given an array, find the maximum possible value of sum of index-element-products(i*array[i]) with only rotations allowed on a given array. Sum of index-element-products for array of length 'n' is computed as - 0*array[0] + 1*array[1] + 2*array[2] + ... + n-1*array[n-1].
+
+ For example, for the array {3,4,5,6,1,2} without doing any rotations sum of index-element-products is 46. After doing one clockwise rotation of the array, it would be modified to {2,3,4,5,6,1} and sum of index-element-products in this case is 55.
+ As you should be able to confirm, maximum value of sum of index-element-products for this given array is 70 which is obtained after performing two clockwise rotations in which case modified array is {1,2,3,4,5,6}.
+
+ For the array {24,26,25,22},
+ index-element-products sum without any rotation is 142. The maximum sum of index-element-products that could be obtained is 151 which is obtained with one clockwise rotation(modified array {22,24,26,25}).
+ */
+
+func findMaxIndexElementProductSum(array: [Int]) -> Int {
+    
+    var sumOfAllElements = 0
+    var sumOfIndexProducts = 0
+    
+    for item in array.enumerated() {
+        sumOfAllElements += item.element
+        sumOfIndexProducts += item.offset * item.element
+    }
+    
+    var maxValue = sumOfIndexProducts
+ 
+    for i in 1..<array.count {
+        sumOfIndexProducts += sumOfAllElements - array.count * array[array.count - i]
+        
+        if sumOfIndexProducts > maxValue {
+            maxValue = sumOfIndexProducts
+        }
+    }
+    
+    return maxValue
+}
+
+//https://www.ideserve.co.in/learn/maximum-size-square-sub-matrix-with-all-1s
+/*
+ Given a matrix of dimensions mxn having all entries as 1 or 0, find out the size of maximum size square sub-matrix with all 1s.
+
+ Please check out the video below for detailed explanation of the algorithm with animations.
+ */
+
+func maximumSizeSquareSubmatrixWithAllOnes(matrix: [[Int]]) -> Int {
+    var maxSize = 0
+    let linearElements = [Int].init(repeating: 0, count: matrix[0].count)
+    var storingTable = [[Int]].init(repeating: linearElements, count: matrix.count)
+    
+    for rowArray in matrix.enumerated() {
+        for items in rowArray.element.enumerated() {
+            if rowArray.offset == 0 || items.offset == 0 {
+                storingTable[rowArray.offset][items.offset] = matrix[rowArray.offset][items.offset]
+                maxSize = storingTable[rowArray.offset][items.offset] > maxSize ? storingTable[rowArray.offset][items.offset] : maxSize
+            } else if matrix[rowArray.offset][items.offset] == 0 {
+                storingTable[rowArray.offset][items.offset] = 0
+            } else {
+                
+                storingTable[rowArray.offset][items.offset] = min(storingTable[rowArray.offset-1][items.offset-1], storingTable[rowArray.offset-1][items.offset], storingTable[rowArray.offset][items.offset - 1]) + 1
+                
+                maxSize = storingTable[rowArray.offset][items.offset] > maxSize ? storingTable[rowArray.offset][items.offset] : maxSize
+            }
+        }
+    }
+    
+    return maxSize
+}
+
+//https://www.ideserve.co.in/learn/maximum-average-subarray
+/*
+ Given an integer array and a number k, print the maximum sum subarray of size k.
+ Maximum average subarray of size k is a subarray (sequence of contiguous elements in the array) for which the average is maximum among all subarrays of size k in the array.
+ Average of k elements = (sum of k elements)/k
+ Since k > 0, the maximum sum subarray of size k will also be maximum average subarray of size k. So, the problem reduces to finding maximum sum subarray of size k in the array.
+ */
+
+func getMaxAvgSubarrayStartIndex(array: [Int], size: Int) -> [Int] {
+    if size == array.count {
+        return array
+    }
+    
+    var sum = 0
+    
+    for i in 0..<size {
+        sum += array[i]
+    }
+    
+    var maxSum = sum
+    var maxSumIndex = 0
+    
+    for i in size..<array.count {
+        sum = sum - array[i-size] + array[i]
+        
+        if maxSum < sum {
+            maxSum = sum
+            maxSumIndex = i - size
+        }
+    }
+    
+    return Array(array[maxSumIndex+1...(maxSumIndex + size)])
+}
+
+//https://www.ideserve.co.in/learn/find-common-elements-in-n-sorted-arrays
+/*
+Given 'n' sorted arrays, find elements which are common in all of these 'n' arrays. For example,
+
+{23, 34, 67, 89, 123, 566, 1000},
+{11, 22, 23, 24,33, 37, 185, 566, 987, 1223, 1234},
+{23, 43, 67, 98, 566, 678},
+{1, 4, 5, 23, 34, 76, 87, 132, 566, 665},
+{1, 2, 3, 23, 24, 344, 566}
+for these given arrays, output should be 23 and 566 since these elements are present in all arrays.
+
+{1, 3, 4, 4, 5, 43, 67, 98, 566, 678},
+{1, 4, 4, 5, 23, 34, 76, 87, 132, 566, 665},
+{1, 2, 4, 4, 5, 23, 24, 344, 566}
+For above arrays, output should be 1,4,4,5,566,
+*/
+
+func printCommonElements(matrix: [[Int]]) -> [Int] {
+    
+    var firstArrayCounter = 0
+    
+    var indexStoreArray = [Int].init(repeating: 0, count: matrix.count)
+    var returnArray = [Int]()
+    var smallestArrayTraversed = false
+    
+    while firstArrayCounter < matrix[0].count && !smallestArrayTraversed {
+        var totalMatchFound = 0
+        
+        for i in 1..<matrix.count {
+            var currentIndex = indexStoreArray[i-1]
+            
+            while currentIndex < matrix[i].count && matrix[i][currentIndex] < matrix[0][firstArrayCounter] {
+                currentIndex += 1
+            }
+            
+            if currentIndex < matrix[i].count {
+                if matrix[i][currentIndex] == matrix[0][firstArrayCounter]
+                {
+                    totalMatchFound += 1;
+                }
+            } else {
+                smallestArrayTraversed = true
+            }
+            indexStoreArray[i-1] = currentIndex
+        }
+        
+        if totalMatchFound == matrix.count - 1 {
+            returnArray.append(matrix[0][firstArrayCounter])
+        }
+        
+        firstArrayCounter += 1
+    }
+    
+    return returnArray 
+}
+
+//https://www.ideserve.co.in/learn/coin-change-problem-number-of-ways-to-make-change
+/*
+ Given an infinite supply of coins of denominations {20,10,5,1}, find out total number of way to make change of given amount - 'n'?
+ For example, if given amount is 20, there are 10 ways to make this change as shown below -
+ (1 of 20),(1 of 10 + 2 of 5),(1 of 10 + 1 of 5 + 5 of 1),(1 of 10 + 10 of 1), (2 of 10), (1 of 5 + 15 of 1),(2 of 5 + 10 of 1),(3 of 5 + 5 of 1),(4 of 5),(20 of 1)
+
+ If the amount given is 0 then the total number of ways to make change is 1 - using 0 coins of every given denomination.
  */

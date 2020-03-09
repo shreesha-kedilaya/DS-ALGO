@@ -40,42 +40,50 @@ class TestingViewController: UIViewController {
     
     private func initialize() {
         print("Selection Sort")
-//        print(BasicSorting.selectionSort(array: array, <))
-//        print("Insertion Sort")
-//        print(BasicSorting.insertionSort(array: array, <))
-//        print("Buuble Sort")
-//        print(BasicSorting.bubbleSort(array: array, <))
+        print(BasicSorting.selectionSort(array: array, <))
+        print("Insertion Sort")
+        print(BasicSorting.insertionSort(array: array, <))
+        print("Buuble Sort")
+        print(BasicSorting.bubbleSort(array: array, <))
         print("Merge Sort")
         print(AdvancedSorting.mergeSort(array: array, <))
+        print("Hoares quick sorting")
+        print(AdvancedSorting.quickSortHoare(array: array, <))
+        print("\n\n\n")
+        print(AdvancedSorting.mergeSort(array: array, <))
         
+        bst()
+        avlTree()
+        trie()
+        linkedList()
+        arrayProblems()
+
+        let queue = Queue<String>()
+        for i in 0...100 {
+            queue.enqueue("i is \(i)")
+        }
+
+        for _ in 0...40 {
+            let string = queue.dequeue()
+
+            print(string)
+        }
+    }
+    
+    func arrayProblems() {
         findNthMostFrequentNumber(array: [1,2,2,2,2,3,3,4,4,4,5,6,6,6], n: 2)
-//        print("Hoares quick sorting")
-//        print(AdvancedSorting.quickSortHoare(array: array, <))
-//        print("\n\n\n")
-//        print(AdvancedSorting.mergeSort(array: array, <))
+        printMatrixDiagonally(matrix: [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]])
+        print(IslandProblem().findNumberOfClusters(matrix: [[1,0,1,0,1],[1,1,0,0,0],[0,1,0,1,1]]))
+
+        findMaxElementsFromSubArray(array: [9,6,11,8,10,5,14,13,93,14,9,6,11,8,10,5,14,13,93,14], size: 6)
+        findNthFromEnd(n: 2, node: SingleLinkedList<Int>(array: [1,2,3,4,5,6,7]))
+        searchElementAndReturnMaxIndex(array: [1,2,2,2,2,3,3,4,4,4,5,6,6,6], number: 4)
+        searchElementAndReturnMinIndex(array: [1,2,2,2,2,3,3,4,4,4,5,6,6,6], number: 4)
+        findMaxIndexElementProductSum(array: [4,5,8])
+        print("printing matrix \(maximumSizeSquareSubmatrixWithAllOnes(matrix: [[1, 1, 0, 0, 1, 1],[0, 0, 1, 0, 1, 1],[1, 1, 1, 1, 1, 0],[1, 1, 1, 1, 1, 1],[1, 1, 1, 1, 1, 1],[0, 1, 1, 1, 1, 1],[1, 0, 0, 0, 1, 1]]))")
+        getMaxAvgSubarrayStartIndex(array: [11, -8, 16, -7, 24, -2, 3], size: 3)
         
-//        bottomView.hitTest(bottomView.center, with: UIEvent)
-        
-//        bst()
-//        avlTree()
-//        trie()
-//        linkedList()
-//
-//        printMatrixDiagonally(matrix: [[1,2,3,4,5],[6,7,8,9,10],[11,12,13,14,15],[16,17,18,19,20]])
-//        print(IslandProblem().findNumberOfClusters(matrix: [[1,0,1,0,1],[1,1,0,0,0],[0,1,0,1,1]]))
-//
-//        findMaxElementsFromSubArray(array: [9,6,11,8,10,5,14,13,93,14,9,6,11,8,10,5,14,13,93,14], size: 6)
-//        findNthFromEnd(n: 2, node: SingleLinkedList<Int>(array: [1,2,3,4,5,6,7]))
-//        let queue = Queue<String>()
-//        for i in 0...100 {
-//            queue.enqueue("i is \(i)")
-//        }
-//
-//        for _ in 0...40 {
-//            let string = queue.dequeue()
-//
-//            print(string)
-//        }
+        printCommonElements(matrix: [[23, 34, 67, 89, 123, 566, 1000],[11, 22, 23, 24,33, 37, 185, 566, 987, 1223, 1234],[23, 43, 67, 98, 566, 678],[1, 4, 5, 23, 34, 76, 87, 132, 566, 665],[1, 2, 3, 23, 24, 344, 566]])
     }
     
     func trie() {
