@@ -99,6 +99,18 @@ class BinarySearchTree<T: Comparable> {
         process(value)
     }
     
+    func find(value: T) -> BinarySearchTree<T>? {
+        if value == self.value {
+            return self
+        }
+        
+        if value < self.value {
+            return left?.find(value: value)
+        } else {
+            return right?.find(value: value)
+        }
+    }
+    
     // Map
     
     func map(form: (T) -> T) -> [T] {
@@ -235,6 +247,54 @@ class BinarySearchTree<T: Comparable> {
         }
         
         return false
+    }
+    
+    func predecessor() -> BinarySearchTree? {
+        if let left = left {
+            return left.max()
+        } else {
+            var node = self
+            while let parent = node.parent {
+                if parent.value < value { return parent }
+                node = parent
+            }
+            return nil
+        }
+    }
+    
+    /*
+     Finds the node whose value succeeds our value in sorted order.
+     */
+    func successor() -> BinarySearchTree? {
+        if let right = right {
+            return right.min()
+        } else {
+            var node = self
+            while let parent = node.parent {
+                if parent.value > value { return parent }
+                node = parent
+            }
+            return nil
+        }
+    }
+    
+    func findLCA(n1: BinarySearchTree<T>, n2: BinarySearchTree<T>) -> BinarySearchTree<T>? {
+        
+        if n1.value < self.value && n2.value > self.value {
+            return self
+        } else if n1.value == self.value || n2.value == self.value {
+            return self
+        }
+        
+        var lcaNode: BinarySearchTree<T>?
+        
+        if n2.value < self.value {
+            lcaNode = left?.findLCA(n1: n1, n2: n2)
+        } else {
+            lcaNode = right?.findLCA(n1: n1, n2: n2)
+        }
+        
+        return lcaNode
     }
 }
 

@@ -51,6 +51,7 @@
                     </view>
                     <connections>
                         <outlet property="bottomView" destination="lgb-sl-imK" id="mXd-9B-ENa"/>
+                        <outlet property="testButton" destination="gNe-3r-8Wk" id="zaj-8o-FlO"/>
                         <outlet property="topView" destination="9pu-W2-ArV" id="oke-dW-yLO"/>
                     </connections>
                 </viewController>

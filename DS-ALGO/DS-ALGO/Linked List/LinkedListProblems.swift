@@ -37,6 +37,8 @@ func findMaxElementsFromSubArray<T: Comparable>(array: [T], size: Int) -> [T] {
             combined.append(array[front])
         }
         
+        print(queue.array)
+        
         while !queue.isEmpty && queue.front ?? 0 <= i-size {
             _ = queue.dequeue()
         }

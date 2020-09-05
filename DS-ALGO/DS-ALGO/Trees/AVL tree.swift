@@ -17,6 +17,8 @@ public class TreeNode<T: Comparable> {
     var height: Int
     weak var parent: Node?
     
+    var neighbour: Node?
+    
     public init(value: T, leftChild: Node?, rightChild: Node?, parent: Node?, height: Int) {
         self.value = value
         self.left = leftChild
@@ -78,6 +80,10 @@ public class TreeNode<T: Comparable> {
         }
         
         return self
+    }
+        
+    func depth() -> Int {
+        return 1 + Swift.max(right?.depth() ?? 0, left?.depth() ?? 0)
     }
     
     var description: String {

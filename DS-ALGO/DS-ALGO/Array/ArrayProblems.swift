@@ -11,8 +11,8 @@ import Foundation
 //https://www.ideserve.co.in/learn/print-matrix-diagonally
 /*
 Input Matrix
-[1, 2, 3, 4, 5]
-[6, 7, 8, 9, 10]
+[1,  2,  3,  4,  5]
+[6,  7,  8,  9,  10]
 [11, 12, 13, 14, 15]
 [16, 17, 18, 19, 20]
 
@@ -385,3 +385,101 @@ func printCommonElements(matrix: [[Int]]) -> [Int] {
 
  If the amount given is 0 then the total number of ways to make change is 1 - using 0 coins of every given denomination.
  */
+
+var countNumberOfCoinsCount = 0
+
+func countNumberOfCoins(array: [Int], sum: Int) -> Int {
+    print("First array \(array), sum \(sum)")
+    var removableArray = array
+    if sum == 0 {
+        print("Returning 1")
+        return 1
+    }
+    
+    if sum < 0 {
+        return 0
+    }
+    
+    if array.isEmpty && sum > 0 {
+        return 0
+    }
+    
+    removableArray.removeLast()
+    return countNumberOfCoins(array: removableArray, sum: sum) + countNumberOfCoins(array: array, sum: sum - array[array.count - 1])
+}
+
+func countNumberOfCoinsOtherWay(array: [Int], sum: Int, coin: Int) -> Int {
+    print("First array \(array), sum \(sum)")
+    countNumberOfCoinsCount += 1
+    print("Printing count = countNumberOfCoinsOtherWay \(countNumberOfCoinsCount)")
+    if sum == 0 {
+        print("Returning 1")
+        return 1
+    }
+    
+    if sum < 0 {
+        return 0
+    }
+    
+    if array.isEmpty && sum > 0 {
+        return 0
+    }
+    
+    var noOfCombos = 0
+    for i in coin...array.count-1 {
+        noOfCombos += countNumberOfCoinsOtherWay(array: array, sum: sum - array[i], coin: i)
+    }
+    
+    return noOfCombos
+}
+
+func dpCountNumberOfCoins(array: [Int], sum: Int) -> Int {
+    
+    let dummyArray = Array<Int>.init(repeating: 0, count: sum + 1)
+    
+    var matrixTable = [[Int]].init(repeating: dummyArray, count: array.count)
+    
+    
+    
+    for i in array.enumerated() {
+        matrixTable[i.offset][0] = 1
+    }
+    
+    for i in 0..<array.count {
+        for j in 1...sum {
+            
+            if array[i] > j {
+                matrixTable[i][j] = i - 1 >= 0 ? matrixTable[i - 1][j]: 0
+            } else {
+                let x = j - array[i] >= 0 ? matrixTable[i][j - array[i]]: 0
+                let y = i >= 1 ? matrixTable[i-1][j]: 0
+                
+                matrixTable[i][j] = x + y
+            }
+        }
+    }
+    
+    return matrixTable.last?.last ?? 0
+}
+
+//https://www.ideserve.co.in/learn/minimum-number-of-coins-to-make-change
+//Given an infinite supply of coins of values: {C1, C2, ..., Cn} and a sum. Find minimum number of coins that can represent the sum.
+
+func minimumNoOfCoinsRecursion(array: [Int], sum: Int) -> Int {
+    if sum == 0 {
+        return 0
+    }
+    
+    var min = Int.max
+    for i in array.enumerated() {
+        if i.element <= sum {
+            let value = minimumNoOfCoinsRecursion(array: array, sum: sum - i.element)
+            
+            if (value + 1) < min && value != Int.max {
+                min = value + 1
+            }
+        }
+    }
+    
+    return min
+}
